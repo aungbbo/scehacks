@@ -12,7 +12,7 @@ export default function RightSidePanel() {
       </div>
       
       {/* Chatbot below the login button */}
-      <div className="w-80 h-96 bg-white border border-gray-200 rounded-xl shadow-lg flex flex-col overflow-hidden max-w-[calc(100vw-2rem)] sm:w-40 sm:h-80 md:w-96 lg:w-112 xl:w-128 2xl:w-180 2xl:h-220">
+      <div className="w-80 h-96 bg-white border border-gray-200 rounded-xl shadow-lg flex flex-col overflow-hidden max-w-[calc(100vw-2rem)] sm:w-20,h-40 md:w-30,h-60 lg:w-80 lg:h-110 xl:w-119 xl:h-200 2xl:w-180 2xl:h-220">
         {/* Header */}
         <div className="bg-black text-white p-4">
           <div className="flex items-center gap-3">
