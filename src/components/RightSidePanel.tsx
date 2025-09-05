@@ -12,7 +12,7 @@ export default function RightSidePanel() {
       </div>
       
       {/* Chatbot below the login button */}
-      <div className="w-165 h-220 bg-white border border-gray-200 rounded-xl shadow-lg flex flex-col overflow-hidden">
+      <div className="w-80 h-96 bg-white border border-gray-200 rounded-xl shadow-lg flex flex-col overflow-hidden max-w-[calc(100vw-2rem)] sm:w-20,h-40 md:w-30,h-60 lg:w-80 lg:h-110 xl:w-119 xl:h-200 2xl:w-180 2xl:h-220">
         {/* Header */}
         <div className="bg-black text-white p-4">
           <div className="flex items-center gap-3">
@@ -38,7 +38,7 @@ export default function RightSidePanel() {
                   <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.4 0-2.74-.35-3.9-.99L3 20l.99-5.1C3.35 13.74 3 12.4 3 11c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/>
                 </svg>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-[500px]">
+              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-[px]">
                 <p className="text-base text-gray-800">Hi! I'm here to help you with anything you need. Ask me a question or let me help you organize your tasks!</p>
               </div>
             </div>
