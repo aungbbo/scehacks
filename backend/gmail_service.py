@@ -81,7 +81,7 @@ def fetch_latest_emails(max_results=2):
                     "subject": subject,
                     "date": sent_date,
                     "body": body_text.strip(),
-                    "email_link": f"https://mail.google.com/mail/u/3/#inbox/{message['id']}",
+                    "email_link": f"https://mail.google.com/mail/u/0/#inbox/{message['id']}",
                 }
             )
         return emails

@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from gmail_service import fetch_latest_emails
 from task_extractor import extract_tasks_from_email
 
 app = Flask(__name__)
 
+CORS(app)
 
 @app.route("/")
 def search_tasks():

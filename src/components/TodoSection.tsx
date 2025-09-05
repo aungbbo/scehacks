@@ -15,6 +15,7 @@ import {
   MoreHorizontal,
   ExternalLink
 } from "lucide-react"
+import { EmailWithTasks, Task } from "@/lib/api"
 
 // Mock data before API integration
 const mockTasks = [
@@ -62,9 +63,36 @@ const priorityColors = {
   low: "bg-green-100 text-green-800 border-green-200"
 }
 
-export function TodoSection() {
+interface TodoSectionProps {
+  generatedTasks?: EmailWithTasks[]
+}
+
+export function TodoSection({ generatedTasks }: TodoSectionProps) {
   const [tasks, setTasks] = React.useState(mockTasks)
   const [filter, setFilter] = React.useState("all")
+
+  // Convert generated tasks to display format
+  React.useEffect(() => {
+    console.log('Generated tasks received:', generatedTasks)
+    
+    if (generatedTasks && Array.isArray(generatedTasks)) {
+      const newTasks = generatedTasks.flatMap((email, emailIndex) => 
+        email.tasks.map((task, taskIndex) => ({
+          id: `generated-${emailIndex}-${taskIndex}`,
+          taskTitle: task.task,
+          email: task.sender,
+          priority: "medium", // Default priority
+          dueDate: task.due_date || "No due date",
+          completed: false,
+          emailLink: task.email_link
+        }))
+      )
+      console.log('New tasks created:', newTasks)
+      setTasks(prev => [...prev, ...newTasks])
+    } else if (generatedTasks) {
+      console.log('Generated tasks is not an array:', typeof generatedTasks, generatedTasks)
+    }
+  }, [generatedTasks])
 
   const filteredTasks = tasks.filter(task => {
     if (filter === "completed") return task.completed
