@@ -83,8 +83,8 @@ export function TodoSection() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">Tasks</h2>
-          <p className="text-gray-600">Find your tasks here</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-primary">Tasks</h2>
+          <p className="text-gray-600 dark:text-primary/80">Find your tasks here</p>
         </div>
         <div className="flex items-center space-x-2">
           <Button variant="outline" size="sm">
@@ -142,7 +142,7 @@ export function TodoSection() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h3 className={`text-sm font-medium ${task.completed ? 'line-through text-gray-500' : 'text-gray-900'}`}>
+                      <h3 className={`text-sm font-medium ${task.completed ? 'line-through text-gray-500 dark:text-gray-400' : 'text-gray-900 dark:text-primary'}`}>
                         {task.taskTitle}
                       </h3>
                       <p className="text-xs text-gray-500 mt-1">From: {task.email}</p>

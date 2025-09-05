@@ -11,9 +11,9 @@ export default function RightSidePanel() {
       </div>
       
       {/* Chatbot below the login button */}
-      <div className="w-80 h-96 bg-white border border-gray-200 rounded-xl shadow-lg flex flex-col overflow-hidden max-w-[calc(100vw-2rem)] sm:w-20,h-40 md:w-30,h-60 lg:w-80 lg:h-110 xl:w-119 xl:h-200 2xl:w-180 2xl:h-220">
+      <div className="w-80 h-96 bg-card border border-border rounded-xl shadow-lg flex flex-col overflow-hidden max-w-[calc(100vw-2rem)] sm:w-20,h-40 md:w-30,h-60 lg:w-80 lg:h-110 xl:w-119 xl:h-200 2xl:w-180 2xl:h-220">
         {/* Header */}
-        <div className="bg-black text-white p-4">
+        <div className="bg-primary text-primary-foreground p-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -28,32 +28,32 @@ export default function RightSidePanel() {
         </div>
         
         {/* Chat Messages Area */}
-        <div className="flex-1 p-4 bg-gray-50">
+        <div className="flex-1 p-4 bg-muted">
           <div className="flex flex-col gap-3">
             {/* Welcome message */}
             <div className="flex items-start gap-2">
-              <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <svg className="w-3 h-3 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.4 0-2.74-.35-3.9-.99L3 20l.99-5.1C3.35 13.74 3 12.4 3 11c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z"/>
                 </svg>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 max-w-[px]">
-                <p className="text-base text-gray-800">Hi! I'm here to help you with anything you need. Ask me a question or let me help you organize your tasks!</p>
+              <div className="bg-card rounded-lg p-4 shadow-sm border border-border max-w-[px]">
+                <p className="text-base text-card-foreground">Hi! I'm here to help you with anything you need. Ask me a question or let me help you organize your tasks!</p>
               </div>
             </div>
           </div>
         </div>
         
         {/* Input area */}
-        <div className="p-4 bg-white border-t border-gray-100 space-y-3">
+        <div className="p-4 bg-card border-t border-border space-y-3">
           {/* Input with integrated send button */}
           <div className="relative">
             <input 
               type="text" 
               placeholder="Type your message..." 
-              className="w-full h-11 pl-4 pr-12 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent bg-gray-50 focus:bg-white transition-colors"
+              className="w-full h-11 pl-4 pr-12 py-2 border border-input rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent bg-input focus:bg-card transition-colors text-foreground"
             />
-            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 h-7 w-7 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center group">
+            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 h-7 w-7 bg-primary text-primary-foreground rounded-full hover:bg-primary/80 transition-colors flex items-center justify-center group">
               <svg className="w-3.5 h-3.5 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
