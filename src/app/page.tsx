@@ -1,7 +1,8 @@
 import { AppSidebar } from "@/components/AppSideBar" 
 import { TodoSection } from "@/components/TodoSection"
-import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
-import Chatbot from "@/components/chatbot"
+import { SidebarInset } from "@/components/ui/sidebar"
+import RightSidePanel from "@/components/RightSidePanel"
+import Header from "@/components/Header"
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       
       {/* Main Content */}  
       <SidebarInset className="flex-1 flex flex-col">
-        {/* Top Navigation with Sidebar Toggle */}
+        {/* Header with Google Login */}
+        <Header />
         
         {/* Main Dashboard */}
         <div className="flex-1 flex">
@@ -20,8 +22,8 @@ export default function Home() {
         </div>
       </SidebarInset>
       
-      {/* Chatbot - Floating in bottom right */}
-      <Chatbot />
+      {/* Right Side Panel - Login button and Chatbot */}
+      <RightSidePanel />
     </div>
   )
 }
