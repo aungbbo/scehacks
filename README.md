@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InboxIQ - Gmail Task Extractor
 
-## Getting Started
+**InboxIQ** is a web application that connects to your Gmail account and extracts actionable tasks from emails using AI. It helps users, students, and professionals quickly identify tasks like online assessments, documents to sign, or networking emails, and presents them in an intuitive to-do list interface.
 
-First, run the development server:
+## 📧 Overview
+
+Every day, millions of people get overwhelmed by their inbox. InboxIQ optimizes your email workflow by scanning your Gmail for tasks based on user preferences and displaying them with relevant information such as sender, subject, due date, and a direct email link.
+
+**Tech Stack:**
+
+- **Frontend:** Next.js & Tailwind CSS
+- **Backend:** Python & Flask
+- **AI Integration:** Google Gemini API for task extraction
+- **Authentication:** Google OAuth
+
+---
+
+## ✨ Features
+
+- 🔐 Google OAuth authentication for Gmail access
+- 📬 Gmail integration to read emails securely
+- 🤖 AI-based task extraction from email content
+- 📋 Modern to-do list style interface
+- 📊 Displays task details: sender, subject, due date, email link
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+- Python 3.8+ and pip
+- Google Cloud project with Gmail API enabled
+- Google Gemini API access and key
+
+### Setup
+
+#### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+#### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+#### 3. Install backend dependencies
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+#### 4. Set up Google OAuth credentials
+
+a. Go to [Google Cloud Console](https://console.cloud.google.com/)
+b. Create a new project or select an existing one
+c. Enable the Gmail API
+d. Go to **Credentials** → **Create OAuth 2.0 Client ID**
+e. Choose **Desktop application** as the type
+f. Download the credentials JSON file and save it as `credentials.json` in the backend directory
+
+#### 5. Set up Gemini API key
+
+Create a `.env` file in the backend directory with the following:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+#### 6. Run the backend server
+
+```bash
+cd backend
+python app.py
+```
+
+#### 7. Run the frontend
+
+In a new terminal:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# org
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### 8. Access the application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
