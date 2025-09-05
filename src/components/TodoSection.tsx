@@ -12,7 +12,8 @@ import {
   Clock,
   CheckCircle2,
   Circle,
-  MoreHorizontal
+  MoreHorizontal,
+  ExternalLink
 } from "lucide-react"
 
 // Mock data before API integration
@@ -24,7 +25,7 @@ const mockTasks = [
     priority: "high",
     dueDate: "Date (if applicable)",
     completed: false,
-    emailLink: "Link to email"
+    emailLink: "Link to email" // we fetch the email link from the backend and we have text called open email for this and the when you cliick on iit it wll redirect you 
   },
   {
     id: 2,
@@ -145,7 +146,15 @@ export function TodoSection() {
                         {task.taskTitle}
                       </h3>
                       <p className="text-xs text-gray-500 mt-1">From: {task.email}</p>
-                      <p className="text-xs text-gray-400 mt-1">{task.emailLink}</p>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="h-5 text-xs flex items-center hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-colors mt-1"
+                        onClick={() => window.open(task.emailLink, '_blank')}
+                      >
+                        <ExternalLink className="h-2.5 w-2.5" />
+                        Email Link
+                      </Button>
                     </div>
                     
                     <div className="flex items-center space-x-2 ml-4">
