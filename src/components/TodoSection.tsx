@@ -19,39 +19,39 @@ import {
 const mockTasks = [
   {
     id: 1,
-    title: "Subject Line",
-    description: "From: email@email.com",
+    taskTitle: "Task Title",
+    email: "email@email.com",
     priority: "high",
     dueDate: "Date (if applicable)",
     completed: false,
-    emailSubject: "Link to email"
+    emailLink: "Link to email"
   },
   {
     id: 2,
-    title: "Update project timeline",
-    description: "From: project.manager@company.com",
+    taskTitle: "Update project timeline",
+    email: "project.manager@company.com",
     priority: "medium",
-    dueDate: "2024-01-20",
+    dueDate: "May 2, 2025",
     completed: false,
-    emailSubject: "Project Timeline Update"
+    emailLink: "https://mail.google.com/mail/u/1/#inbox/FMfcgzQcpdlBxvChMJlCbGnmchGrptTm"
   },
   {
     id: 3,
-    title: "Prepare client presentation",
-    description: "From: sales@company.com",
+    taskTitle: "Prepare client presentation",
+    email: "sales@company.com",
     priority: "high",
-    dueDate: "2024-01-12",
+    dueDate: "May 22, 2025",
     completed: true,
-    emailSubject: "Client Meeting Next Week"
+    emailLink: "https://mail.google.com/mail/u/1/#inbox/FMfcgzQcpdlBxvChMJlCbGnmchGrptTm"
   },
   {
     id: 4,
-    title: "Submit expense reports",
-    description: "From: hr@company.com",
+    taskTitle: "Submit expense reports",
+    email: "hr@company.com",
     priority: "low",
-    dueDate: "2024-01-25",
+    dueDate: "May 25, 2025",
     completed: false,
-    emailSubject: "Monthly Expense Reports Due"
+    emailLink: "https://mail.google.com/mail/u/1/#inbox/FMfcgzQcpdlBxvChMJlCbGnmchGrptTm"
   }
 ]
 
@@ -142,10 +142,10 @@ export function TodoSection() {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h3 className={`text-sm font-medium ${task.completed ? 'line-through text-gray-500' : 'text-gray-900'}`}>
-                        {task.title}
+                        {task.taskTitle}
                       </h3>
-                      <p className="text-xs text-gray-500 mt-1">{task.description}</p>
-                      <p className="text-xs text-gray-400 mt-1">{task.emailSubject}</p>
+                      <p className="text-xs text-gray-500 mt-1">From: {task.email}</p>
+                      <p className="text-xs text-gray-400 mt-1">{task.emailLink}</p>
                     </div>
                     
                     <div className="flex items-center space-x-2 ml-4">
