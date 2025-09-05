@@ -1,7 +1,6 @@
 'use client';
 
 import GoogleLoginButton from './GoogleLoginButton';
-import Chatbot from './chatbot';
 
 export default function RightSidePanel() {
   return (
@@ -62,14 +61,14 @@ export default function RightSidePanel() {
           </div>
           
           {/* Quick action button */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <button className="h-9 px-4 text-xs bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-200 flex items-center gap-2 shadow-sm hover:shadow-md">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
               Create To-Do List
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

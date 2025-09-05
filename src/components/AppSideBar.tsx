@@ -88,9 +88,9 @@ export function AppSidebar() {
               <p className="text-xs text-gray-500">Task Management</p>
             </div>
           </div>
-          <SidebarTrigger className="sidebar-collapsed:hidden">
+          {/* <SidebarTrigger className="sidebar-collapsed:hidden">
             <ChevronLeft className="h-4 w-4" />
-          </SidebarTrigger>
+          </SidebarTrigger> */}
         </div>
       </SidebarHeader>
       
