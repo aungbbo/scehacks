@@ -13,7 +13,7 @@ export default function RightSidePanel({ onTasksGenerated }: RightSidePanelProps
     <div className="fixed top-4 right-4 z-50 flex flex-col gap-4">
       {/* Google Login Button at the top */}
       <div className="flex justify-end">
-        <GoogleLoginButton />
+        <GoogleLoginButton className="shadow-md hover:shadow-lg transition-shadow" />
       </div>
       
       {/* Chatbot below the login button */}

@@ -19,22 +19,6 @@ export const api = {
     if (!response.ok) {
       throw new Error(`Failed to search tasks: ${response.statusText}`)
     }
-    
-    const data = await response.json()
-    console.log('API response:', data)
-    
-    // Handle different response formats
-    if (Array.isArray(data)) {
-      // Success case: array of emails with tasks
-      return data
-    } else if (data.message) {
-      // No results case: return empty array
-      console.log('No tasks found:', data.message)
-      return []
-    } else {
-      // Error case: return empty array
-      console.error('Unexpected response format:', data)
-      return []
-    }
+    return response.json()
   }
 }

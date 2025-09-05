@@ -40,16 +40,16 @@ export default function Chatbot({ onTasksGenerated }: ChatbotProps) {
     }
 
   return (
-    <div className="w-80 h-96 bg-white border-2 border-blue-200 rounded-xl shadow-xl flex flex-col p-6 z-50 hover:shadow-2xl transition-all duration-300">
+    <div className="w-80 h-[450px] bg-gradient-to-br from-white to-blue-50 border border-blue-200 rounded-2xl shadow-lg flex flex-col p-5 z-50 hover:shadow-xl transition-all duration-300">
       {/* Header - Top Middle */}
-      <div className="flex flex-col items-center mb-6">
-        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-          <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+      <div className="flex flex-col items-center mb-5">
+        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-3 shadow-md">
+          <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Gmail Task Search</h3>
-        <p className="text-sm text-gray-600 text-center">Search your emails for tasks!</p>
+        <h3 className="text-lg font-semibold text-gray-800">Gmail Task Search</h3>
+        <p className="text-sm text-gray-500 text-center">Find tasks in your emails</p>
       </div>
       
       {/* Error Message */}
@@ -70,47 +70,47 @@ export default function Chatbot({ onTasksGenerated }: ChatbotProps) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Search for tasks (e.g., 'assignment', 'deadline')" 
-            className="flex-1 h-12 px-2 py-2 border rounded-full text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Search for tasks..." 
+            className="flex-1 h-10 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-white/80"
             disabled={loading}
           />
           <Button 
             onClick={handleSearch}
             disabled={loading || !message.trim()}
-            className="h-12 px-6 rounded-full"
+            className="h-10 px-4 rounded-lg text-sm font-medium bg-blue-600 hover:bg-blue-700"
           >
-            {loading ? "Searching..." : "Search"}
+            {loading ? "..." : "Search"}
           </Button>
         </div>
         
         {/* Quick search buttons */}
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-2 flex-wrap justify-center">
           <Button 
             variant="outline" 
             size="sm"
             onClick={() => setMessage("assignment")}
-            className="text-xs"
+            className="text-xs px-3 py-1.5 rounded-md hover:bg-blue-50 hover:border-blue-300 border-gray-200"
             disabled={loading}
           >
-            Assignment
+            📝 Assignment
           </Button>
           <Button 
             variant="outline" 
             size="sm"
             onClick={() => setMessage("deadline")}
-            className="text-xs"
+            className="text-xs px-3 py-1.5 rounded-md hover:bg-blue-50 hover:border-blue-300 border-gray-200"
             disabled={loading}
           >
-            Deadline
+            ⏰ Deadline
           </Button>
           <Button 
             variant="outline" 
             size="sm"
             onClick={() => setMessage("meeting")}
-            className="text-xs"
+            className="text-xs px-3 py-1.5 rounded-md hover:bg-blue-50 hover:border-blue-300 border-gray-200"
             disabled={loading}
           >
-            Meeting
+            🤝 Meeting
           </Button>
         </div>
       </div>
