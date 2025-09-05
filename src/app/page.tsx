@@ -1,6 +1,7 @@
 import { AppSidebar } from "@/components/AppSideBar" 
 import { TodoSection } from "@/components/TodoSection"
 import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
+import Chatbot from "@/components/chatbot"
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
           <TodoSection />
         </div>
       </SidebarInset>
+      
+      {/* Chatbot - Floating in bottom right */}
+      <Chatbot />
     </div>
   )
 }
